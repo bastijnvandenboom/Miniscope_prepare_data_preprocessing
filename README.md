@@ -3,7 +3,7 @@ Prepare Miniscope V3 data before preprocessing (NoRMCorre and CNMF-E), used in t
 
 These functions prepare Miniscope V3 recorded data per sessions to be able to easily preprocess the data using NoRMCorre and CNMF-E). 
 
-Folders must be organized ...\animal\session\imaging\raw\miniscope_recording_folders [imaging and raw need to be named like that, or change line 34!].
+Folders must be organized ...\animal\session\imaging\raw\miniscope_recording_folders (imaging and raw need to be named like that, or change line 34!).
 miniscope_recording_folders need to be Miniscope V3 sub folders (e.g., H14_M24_S1) with imaging data (e.g., msCam1.avi and msCam2.avi) and timestamps of imaging frame (i.e., timestamp.dat).
 
 Important script
@@ -29,23 +29,6 @@ Output
 - second row is stop frame of individual recordings in the concatenated .tiff file
 - third row is total number of frames of individual recordings in the concatenated .tiff file
 - any next row shows location of missing frame (e.g., frame 400). if you find replicates (e.g., 400 400 400 400 400), you have 5 missing frames at location 400
-
-
-
-
-Preprocessing pipeline used to preprocess Miniscope data (NoRMCorre and CNMF-E) in the Willuhn lab at the Netherlands Institute for Neuroscience.
-
-One can run preprocessing for a given session (single mode) or number of sessions consecutive (batch mode). For both options, it runs NoRMCorre on every video, saves non-rigid tiff file, and uses that to run CNMF-e.
-
-Important scripts
-
-    cai_pipeline_bastijn: single mode
-    cai_pipeline_bastijn_batch: batch mode
-
-Optional scripts
-
-    cai_pipeline_bastijn_batch_cnmfe_videos: same as cai_pipeline_bastijn, but in addition saves denoised and demixed video. Run this on a small video file (~1000 frames).
-    only_cnmf_e_bastijn: only run CNMF-E (use this if CNMF-E keeps crashing during certain session and you want to manually get the right parameters)
 
 This pipeline makes use of another package (included in this folder):
 
