@@ -7,7 +7,7 @@ Folders must be organized ...\animal\session\imaging\raw\miniscope_recording_fol
 miniscope_recording_folders need to be Miniscope V3 sub folders (e.g., H14_M24_S1) with imaging data (e.g., msCam1.avi and msCam2.avi) and timestamps of imaging frame (i.e., timestamp.dat).
 
 Important script
-- universal_miniscope_preprocessing: runs all the function
+- universal_miniscope_preprocessing: runs all the functions
 
 Options
 - asks user to select one folder or all folders with a given extension in a main folder
